@@ -15,7 +15,8 @@ var a= document.getElementById("input_a");
 var c= document.getElementById("input_c");
 
 var boton=document.getElementById("boton");
-
+var r3=document.getElementById("resultado3");
+var r2=document.getElementById("resultado2");
 var r=document.getElementById("resultado");
 
 
@@ -44,7 +45,7 @@ function calcular(){
               sI_minus_A[i][j] = new algebra.parse(`(${s})*(${I[i][j]}) - (${A[i][j]})`).simplify();
           }
       }
-  
+      r3.innerHTML="                    "+sI_minus_A[0][0].toString()+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+sI_minus_A[0][1].toString()+"<br/>"+"(s*I-A)="+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"+sI_minus_A[1][0].toString()+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+sI_minus_A[1][1].toString();
       // Calcular el determinante de (sI - A)
       var det = new algebra.parse(`(${sI_minus_A[0][0]})*(${sI_minus_A[1][1]}) - (${sI_minus_A[0][1]})*(${sI_minus_A[1][0]})`).simplify();
   
@@ -53,7 +54,8 @@ function calcular(){
           [sI_minus_A[1][1], new algebra.parse(`0 - (${sI_minus_A[0][1]})`)],
           [new algebra.parse(`0 - (${sI_minus_A[1][0]})`), sI_minus_A[0][0]]
       ];
-  
+      r2.innerHTML="                    "+adjunto[0][0].toString()+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+adjunto[0][1].toString()+"<br/>"+"(s*I-A)^-1="+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"+adjunto[1][0].toString()+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+adjunto[1][1].toString();
+      console.log(adjunto.toString());
       // Calcular C * adjunto * B
       var C_adj = multiplicarMatrices(C, adjunto);
       var numerador = multiplicarMatrices(C_adj, B)[0][0].simplify();  // Se obtiene el único elemento
