@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS TO TF</title>
+    <link type="text/css" rel="stylesheet" href="./style.css"/>
+    <script src="algebra.js"></script>
+</head>
+<body>
+    <header>
+        <ul class="tabla__header">
+            <li>
+                <figure >
+                    <img class="imagen" src="./UPTC.png" alt="Logo UPTC">
+                </figure>
+            </li>
+            <li>
+            </li>                 
+        </ul>    
+    </header>
+    <section> 
+        <ul> 
+            <li class="principal"> <h1 > SS TO TF </h1></li>
+        </ul>
+
+        <ul >
+            <li>
+                <p class="texto_instrucciones">Ingrese el espacio de estados de segundo orden según lo indicado abajo, para convertirlo a función de transferencia</p>    
+            </li>
+            <li>
+                <figure class="imagensistema">
+                    <img  src="2.png" alt="Espacio de estados sistema de segundo orden">
+                </figure>
+            </li>
+        </ul>
+
+        <ul class="l">        
+            <li>       
+                <p class="p__texto_sis" >Ingrese a11  
+                    <input class="text" value="1" type="number" id="input_a11" required/>
+                </p>
+            </li>
+            <li>       
+                <p class="p__texto_sis" >Ingrese a12  
+                    <input class="text" value="0" type="number" id="input_a12" required/>
+                </p>
+            </li>
+            <li>       
+                <p class="p__texto_sis" >Ingrese a21  
+                    <input class="text" value="4.56" type="number" id="input_a21" required/>
+                </p>
+            </li>
+            <li>       
+                <p class="p__texto_sis" >Ingrese a22  
+                    <input class="text" value="3" type="number" id="input_a22" required/>
+                </p>
+            </li>
+        </ul>  
+
+        <ul class="l">  
+            <li>       
+                <p class="p__texto_sis" >Ingrese b1 
+                    <input class="text" value="0" type="number" id="input_b1" required/>
+                </p>
+            </li>
+            <li>       
+                <p class="p__texto_sis" >Ingrese b2 
+                    <input class="text" value="3" type="number" id="input_b2" required/>
+                </p>
+            </li>
+        </ul>
+
+        <ul class="l">     
+            <li>       
+                <p class="p__texto_sis" >Ingrese c1 
+                    <input class="text" value="5" type="number" id="input_c1" required/>
+                </p>
+            </li>
+            <li>       
+                <p class="p__texto_sis" >Ingrese c2 
+                    <input class="text" value="0" type="number" id="input_c2" required/>
+                </p>
+            </li>
+        </ul>
+        <ul class="l">     
+            <li>       
+                <p class="p__texto_sis" >Ingrese D 
+                    <input class="text" value="1" type="number" id="input_d" required/>
+                </p>
+            </li>
+        </ul>
+    
+        <ul style="width:100vw ; justify-content: center;">        
+            <li style="width:100vw ; justify-content: center;">
+                <p style="width:100vw ; justify-content: center;">
+                    <input class="boton" type="submit" id="boton" value="Calcular"/>
+                </p>
+            </li>      
+            <li style="text-align:-webkit-center ;">
+                <p class="res" id="resultado"></p>    
+            </li>
+ 
+        </ul>
+    </section>
+
+
+</head>
+    <script src="SSTOTF.js"></script>
+
+    <footer class="footer">
+        <ul>
+            <li style="text-align:center ;">
+                Autores:
+            </li>
+            <li>
+                Oscar Humberto Sierra Herrera(1)(2)
+            </li>
+            <li>
+                Mario Eduardo Gonzalez Niño(2)(3)
+            </li>
+            <li>
+                Luis David Patarroyo Gutierrez (1)
+            </li>
+            <li style="text-align:center ;">
+                (1)Grupo de investigación I2E
+            </li>
+            <li style="text-align:center ;">
+                (2)Grupo de investigación DSP
+            </li>
+            <li style="text-align:center ;">
+                (3)Grupo de investigación GENTE
+            </li>
+            <li style="text-align:center">
+                2025
+            </li>
+        </ul>
+
+    </footer>
+
+
+</body>
+</html>
